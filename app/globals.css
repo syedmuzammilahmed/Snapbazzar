@@ -19,3 +19,76 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.chart-block circle {
+  transform-origin: center;
+  transform-box: fill-box;
+  fill: none;
+  stroke-dasharray: 0 1000;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.chart-block circle:hover {
+  stroke-width: 250;
+  transition: all 0.3s;
+}
+
+.chart-block circle.active {
+  stroke-width: 250;
+}
+
+.c1 {
+  transform: rotate(-150deg);
+  stroke: #5C6BC0;
+}
+
+.c2 {
+  transform: rotate(-270deg);
+  stroke: #AB47BC;
+}
+
+.c3 {
+  transform: rotate(-30deg);
+  stroke: #F06292;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Glowing "radiation" effect for the login card */
+@keyframes cardGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-color: white;
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+    background-color: #f0f9ff; /* Light blue background */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-color: white;
+  }
+}
+
+/* Card animations */
+.animate-cardGlow {
+  animation: cardGlow 3s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+
